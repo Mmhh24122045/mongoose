@@ -22,7 +22,7 @@ app.post("/addUsers",async(req,res)=>{
             avatar
         })
         await newUser.save()
-        res.send(`${newUser.name} registered successfully!`)
+        res.send(newUser)
     } catch (error) {
         console.log(error.message)
     }
